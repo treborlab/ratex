@@ -17,7 +17,7 @@ defaults:
 
 jobs:
   check_status:
-    if: github.repository == 'awslabs/ratex'
+    if: true
     runs-on: ubuntu-latest
     outputs:
       trigger: ${{ steps.job_info.outputs.trigger }}
@@ -80,7 +80,7 @@ jobs:
   test_on_gpu:
     # Run full tests with the latest docker image on GPU.
     needs: [check_status]
-    if: github.repository == 'awslabs/ratex'
+    if: true
     runs-on: ubuntu-latest
     steps:
       - uses: haya14busa/action-workflow_run-status@v1
@@ -144,7 +144,7 @@ jobs:
 
   test_on_multi_gpu:
     needs: [check_status]
-    if: github.repository == 'awslabs/ratex'
+    if: true
     runs-on: ubuntu-latest
     steps:
       - uses: haya14busa/action-workflow_run-status@v1

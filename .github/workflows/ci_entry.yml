@@ -20,7 +20,7 @@ defaults:
 
 jobs:
   entry:
-    if: github.repository == 'awslabs/ratex'
+    if: true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
